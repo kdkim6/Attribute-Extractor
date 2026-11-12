@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A transparent, source-linked, customer-language Strategy Canvas and Blue Ocean opportunity analysis.">
+<title>Blue Ocean Attribute Extractor | Customer-Led Strategy Canvas</title>
+<style>
+:root{--ink:#142f31;--muted:#607474;--green:#0a6d60;--green2:#2a8a78;--paper:#f6f5f1;--white:#fff;--line:#dfe7e2;--blue:#396da5;--orange:#da8257;--purple:#8266a7;--soft:#e5f1ec;--red:#b25548;--shadow:0 12px 34px rgba(16,52,48,.075)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-size:14px;line-height:1.55}button,input,textarea,select{font:inherit}button{cursor:pointer}a{color:#116b74;text-underline-offset:3px}a:hover{color:#084a4c}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #62b9ad;outline-offset:2px}.mono,.eyebrow,.chip,.stat-number,.tab{font-variant-numeric:tabular-nums}.top{background:#143e3c;color:#e5f7ee;padding:9px max(28px,calc((100vw - 1190px)/2));display:flex;justify-content:space-between;align-items:center;gap:15px;letter-spacing:.13em;font-weight:750;text-transform:uppercase;font-size:10px}.top span:last-child{color:#abd6cb}.shell{max-width:1250px;margin:auto;padding:0 27px 85px}.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:45px;align-items:center;padding:56px 0 38px}.eyebrow{font-size:11px;font-weight:780;letter-spacing:.17em;text-transform:uppercase;color:var(--green)}h1{font-size:clamp(39px,5.2vw,69px);letter-spacing:-.058em;line-height:1.02;margin:15px 0 22px;font-weight:770}h1 em{font-family:Georgia,serif;font-weight:500;color:var(--green);font-style:italic}h2{font-size:24px;line-height:1.2;letter-spacing:-.035em;margin:0}h3{font-size:16px;line-height:1.3;margin:0}p{margin:0}p+p{margin-top:12px}.hero-desc{max-width:575px;font-size:16px;color:#486261;line-height:1.7}.hero-visual{position:relative;background:#dbede7;border-radius:25px;padding:22px;min-height:220px;overflow:hidden;box-shadow:var(--shadow)}.hero-visual:before{content:"";width:235px;height:235px;border:1px solid rgba(11,87,78,.21);border-radius:50%;position:absolute;right:-84px;top:-108px;box-shadow:0 0 0 42px rgba(11,87,78,.055),0 0 0 84px rgba(11,87,78,.035)}.hero-visual blockquote{font:italic 22px/1.28 Georgia,serif;position:relative;margin:23px 10px;max-width:270px;letter-spacing:-.02em}.hero-visual strong{display:block;position:relative;text-transform:uppercase;letter-spacing:.12em;font-size:10px}.pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:19px;position:relative}.pills span{border:1px solid #a2c8bd;background:#eff9f5;border-radius:99px;font-size:11px;padding:6px 10px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:5px 0 24px;flex-wrap:wrap}.tabs{display:flex;background:#e9eee9;padding:5px;border:1px solid var(--line);border-radius:13px;gap:4px}.tab{border:0;border-radius:10px;padding:12px 18px;background:transparent;color:#4c6563;font-size:12px;font-weight:770}.tab.active{background:white;color:#0b6459;box-shadow:0 3px 12px #093e3114}.buttons{display:flex;flex-wrap:wrap;gap:8px}.btn{border:1px solid #cdded7;color:#27534d;background:#fff;border-radius:11px;padding:11px 15px;font-weight:750;font-size:12px;display:inline-flex;align-items:center;gap:8px;justify-content:center}.btn:hover{background:#f1f8f5}.btn.primary{background:#0f6b5f;color:white;border-color:#0f6b5f}.btn.primary:hover{background:#0b534a}.btn.danger{color:var(--red);border-color:#edd4cf}.btn.tiny{padding:5px 9px;font-size:10px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 2px 12px rgba(20,47,49,.024)}.kpi{padding:20px 21px 17px}.stat-number{font-size:29px;font-weight:810;letter-spacing:-.04em}.stat-label{color:#627b77;font-size:12px;margin-top:2px}.stat-detail{font-size:10px;color:#7a8c87;margin-top:12px;text-transform:uppercase;letter-spacing:.08em}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:34px 0 15px;flex-wrap:wrap}.section-head p{color:#607874;margin-top:6px;font-size:13px}.label-small{font-size:10px;font-weight:760;text-transform:uppercase;letter-spacing:.13em;color:#628177;margin-bottom:7px}.chip{display:inline-flex;align-items:center;gap:7px;border-radius:100px;background:#eff5f0;color:#477368;border:1px solid #d5e7de;padding:5px 10px;font-size:10px;font-weight:760}.chart-card{padding:23px 24px 16px}.chart-tools{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.legend{display:flex;gap:15px;flex-wrap:wrap;margin:16px 0 4px}.legend-item{font-size:11px;display:flex;gap:6px;align-items:center;color:#4a6460;font-weight:650}.swatch{width:11px;height:11px;border-radius:50%;display:inline-block}.chart-scroll{overflow-x:auto;overflow-y:hidden;min-height:350px}.chart-scroll svg{min-width:850px;width:100%;height:auto;display:block}.chart-foot{font-size:11px;color:#61756f;display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 0}.table-scroll{overflow-x:auto}.score-table{width:100%;border-collapse:collapse;font-size:12px}.score-table th,.score-table td{text-align:left;padding:12px 13px;vertical-align:middle;border-bottom:1px solid #e7eee9}.score-table th{background:#f4f7f4;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#557069}.score-table td:nth-child(n+2),.score-table th:nth-child(n+2){text-align:center}.score-table tr:last-child td{border-bottom:0}.score-table tr:hover td{background:#f9fbf9}.score-table .score{font-weight:810;font-size:15px}.score-table .count{font-size:10px;color:#8c9a95;display:block}.score-table .na{font-size:11px;color:#adb4af}.table-card{overflow:hidden}.callout-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.finding{padding:23px 24px;border-left:4px solid #3d9f8b}.finding.parity{border-left-color:#7d8fa2}.finding h3{font-size:16px;margin:7px 0 10px}.finding p{color:#5b706a;font-size:12px;line-height:1.65}.recommendation{background:#153d3d;color:white;padding:27px 30px;margin-top:19px;border-radius:18px}.recommendation .eyebrow{color:#a8d6c7}.recommendation h2{font-size:23px;margin:9px 0 12px;color:#fff}.recommendation p{color:#dcf0e8;line-height:1.75;font-size:13px;max-width:1000px}.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:17px}.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.attribute{padding:19px 19px 16px}.attribute-head{display:flex;align-items:start;justify-content:space-between;gap:10px}.attribute h3{font-size:15px;margin-bottom:3px}.attribute .meta{font-size:10px;color:#72857d}.attribute .tokens{font-size:11px;color:#46655f;margin:10px 0 12px}.evidence-list{display:grid;gap:10px}.quote{font-size:12px;line-height:1.55;border-top:1px solid #edf1ee;padding-top:10px}.quote:first-child{border-top:0;padding-top:0}.quote b{font-size:10px;color:#4d6661;margin-right:5px}.quote a{font-size:10px;text-decoration:none}.quote small{font-size:10px;color:#748d84}.quote mark{background:#d3f0df;border-radius:3px;padding:0 2px;color:inherit}.tone{font-size:9px;text-transform:uppercase;font-weight:800;letter-spacing:.06em}.tone.pos{color:#13795d}.tone.neg{color:#b2574c}.tone.neu{color:#77837e}.note{background:#ecf3ed;border:1px solid #dae6dc;border-radius:12px;padding:13px 16px;color:#5c716a;font-size:11px}.note b{color:#325f53}.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.method-card{padding:20px}.method-card .n{font-family:Georgia,serif;color:#4f9788;font-size:29px;font-style:italic}.method-card h3{margin:9px 0}.method-card p{color:#617872;font-size:12px}.code-math{font-family:ui-monospace,monospace;background:#f0f7f4;border:1px solid #dcebe3;padding:12px;margin-top:11px;border-radius:9px;font-size:12px;line-height:1.7;overflow-wrap:anywhere}.info-list{padding:15px 0 0 18px;color:#546f67;font-size:12px}.info-list li{margin-bottom:8px}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.control-card{padding:22px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}.field label{font-size:11px;font-weight:770;color:#4d6a62}.field input,.field textarea,.field select{display:block;width:100%;background:#fcfdfb;border:1px solid #cfded7;border-radius:10px;color:#173630;padding:11px 12px}.field textarea{min-height:90px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#96a69f}.subtle{font-size:12px;color:#688078}.data-table{border-collapse:collapse;width:100%;font-size:11px}.data-table th,.data-table td{padding:10px;border-bottom:1px solid #edf1ed;text-align:left;vertical-align:top}.data-table th{background:#f3f7f3;position:sticky;top:0}.data-table tr:hover{background:#fafffb}.data-table td:nth-child(2){min-width:255px}.data-table td a{overflow-wrap:anywhere}.source-scroll{max-height:560px;overflow:auto}.user-pill{border:1px solid #bfdcd1;color:#296455;font-size:11px;border-radius:99px;padding:5px 9px;display:inline-block}.input-help{font-size:11px;color:#6c827b;margin-top:8px}.submit-box{padding:26px}.url-preview{font-size:13px;font-weight:770;word-break:break-all}.footer{margin-top:40px;padding-top:16px;border-top:1px solid #d4e1d8;color:#74867d;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}.error{background:#fff1ed;border:1px solid #efb7ac;color:#a34f40;padding:11px 13px;border-radius:9px;margin-bottom:14px}.success{background:#eef9f3;border:1px solid #b9e6d0;color:#267555;padding:11px 13px;border-radius:9px;margin-bottom:14px}.print-only{display:none}#minedTerms{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.print-head{display:none}.fine{font-size:11px;color:#778982}.warning{color:#ad5c4f;font-weight:750}.print-source-list{display:none}@media(max-width:950px){.hero{grid-template-columns:1fr;gap:18px;padding-top:36px}.hero-visual{min-height:165px}.hero-visual blockquote{font-size:20px}.details-grid,.two-col,.control-grid{grid-template-columns:1fr}.method-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:580px){.shell{padding:0 15px 50px}.top{padding:10px 15px}.hero{padding-top:28px}.toolbar{align-items:stretch}.tabs{width:100%;justify-content:space-around}.tab{padding:11px 8px}.buttons{width:100%}.buttons .btn{flex:1}.kpis{gap:9px}.kpi{padding:14px}.stat-number{font-size:25px}.chart-card{padding:15px}.callout-grid,.method-grid{grid-template-columns:1fr}.section-head h2{font-size:22px}}
+@page{size:A4 portrait;margin:13mm 12mm} @media print{body{background:#fff!important;color:#182e2c;font-size:9pt;print-color-adjust:exact;-webkit-print-color-adjust:exact}.top,.hero,.toolbar,.kpis,.footer,.no-print,#studioPanel,#methodsPanel,#dataControls,#toast,.btn,.tabs{display:none!important}.shell{max-width:none;margin:0;padding:0}.print-only,.print-head,.print-source-list{display:block!important}.print-head{border-bottom:2px solid #174e46;padding-bottom:12px;margin-bottom:14px}.print-head h1{font-size:22pt;letter-spacing:-.03em;line-height:1.12;margin:5px 0}.print-head a{font-size:10pt;overflow-wrap:anywhere}.print-head .eyebrow{font-size:8pt}.section-head{margin:14px 0 8px}.section-head h2{font-size:15pt}.section-head p{font-size:8pt}.card,.finding,.recommendation{box-shadow:none!important;border-radius:8px}.chart-card{padding:9px 13px 4px}.chart-scroll{overflow:visible;min-height:0}.chart-scroll svg{min-width:0!important;height:auto;width:100%}.legend{margin:2px 0;gap:11px}.legend-item{font-size:8pt}.chart-foot{font-size:7pt}.score-table{font-size:8pt}.score-table th,.score-table td{padding:5px 8px}.score-table .score{font-size:10pt}.callout-grid{gap:9px;margin-top:9px;break-inside:avoid}.finding{padding:12px 14px}.finding h3{font-size:12pt}.finding p{font-size:8pt}.recommendation{padding:16px;margin-top:10px}.recommendation h2{font-size:13pt}.recommendation p{font-size:9pt}.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.attribute{padding:11px 13px;break-inside:avoid;box-shadow:none}.attribute h3{font-size:11pt}.attribute .meta,.attribute .tokens,.quote,.quote small{font-size:8pt}.quote{padding-top:6px}.section-head,.recommendation,.chart-card,.table-card{break-inside:avoid}#scoreTableHeader{page-break-before:always}.note{margin-top:9px;padding:9px;font-size:8pt}.print-source-list{page-break-before:always}.print-source-list h2{font-size:17pt}.print-source-list ol{padding-left:20px}.print-source-list li{margin:6px 0;font-size:7.2pt;break-inside:avoid;overflow-wrap:anywhere}.print-source-list a{color:#2d5d55}.print-source-list .src-snippet{color:#536860}.fine{font-size:8pt}.report-method{margin-top:12px}.print-method-copy{display:block!important}.print-method-copy p{font-size:8pt;margin-top:5px}.report-chart{page-break-inside:avoid}#canvasPanel{display:block!important}.quote mark{background:#d6f2e2!important}}
+</style>
+</head>
+<body>
+<div class="top"><span>CUSTOMER INTELLIGENCE <span style="padding:0 9px;color:#68a69a">/</span> STRATEGY CANVAS</span><span>Open source logic · zero sign-in · one HTML file</span></div>
+<div class="shell">
+<header class="hero"><div><div class="eyebrow">From voice of customer to value curve</div><h1>Blue Ocean<br><em>Attribute Extractor.</em></h1><p class="hero-desc">Discover what customers actually discuss. Trace every attribute back to source language, compare competitors with reproducible scores, and surface the spaces the market is missing.</p><div class="pills"><span>01 · Ingest</span><span>02 · Extract</span><span>03 · Score</span><span>04 · Find openings</span></div></div><aside class="hero-visual" aria-label="Method philosophy"><strong>THE GUIDING QUESTION</strong><blockquote>“Where are customers asking for something the entire industry fails to deliver?”</blockquote><span class="eyebrow" style="color:#376b60">Evidence before assumptions.</span></aside></header>
+<div class="toolbar"><div class="tabs" role="tablist" aria-label="Tool sections"><button class="tab active" data-panel="studioPanel" role="tab" aria-selected="true">Data Studio</button><button class="tab" data-panel="canvasPanel" role="tab" aria-selected="false">Strategy Canvas</button><button class="tab" data-panel="methodsPanel" role="tab" aria-selected="false">Method &amp; Limits</button></div><div class="buttons"><button id="downloadCsv" class="btn">↓ Export dataset CSV</button><button id="printTop" class="btn primary">↗ Print analysis</button></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<section id="studioPanel" class="panel"><div class="section-head"><div><div class="label-small">Working dataset</div><h2>Data Studio</h2><p>Start with the Chipotle example or replace it with customer reviews for any competing companies. Edit the dataset here; then view the automatically refreshed Strategy Canvas.</p></div><div class="buttons"><button class="btn primary" id="viewCanvas">View Strategy Canvas →</button><button class="btn" id="resetData">↻ Restore example data</button></div></div>
+<div class="control-grid"><div class="card control-card"><h3>Analyze a different company</h3><p class="subtle" style="margin:7px 0 15px">Company names come directly from imported or entered reviews; the target may be any one of them.</p><div class="field"><label for="targetBrand">Strategic focus company</label><select id="targetBrand"></select></div><div class="field"><label for="newBrand">Add a new customer excerpt: competitor</label><input id="newBrand" placeholder="e.g., Nike, Adobe, Patagonia" maxlength="100"></div><div class="field"><label for="newReview">Exact customer language (short source excerpt)</label><textarea id="newReview" placeholder="Paste a customer review or a short quote from a review."></textarea></div><div class="field"><label for="newUrl">Source URL (https://...)</label><input id="newUrl" type="url" placeholder="https://www.example.com/reviews/..."></div><div class="field"><label for="newDate">Review date</label><input id="newDate" type="date"></div><button id="addReview" class="btn primary">+ Add cited review</button><p class="input-help">Enter original source text, not an AI paraphrase. The score is recomputed immediately.</p></div>
+<div class="card control-card"><h3>Bulk import, no web scraping required</h3><p class="subtle" style="margin:7px 0 15px">Export a CSV first to see the format. You can import reviews for any 4–5 competing companies.</p><div class="field"><label for="csvFile">Load CSV file</label><input id="csvFile" type="file" accept=".csv,text/csv"></div><div class="field"><label for="csvPaste">Or paste CSV with header</label><textarea id="csvPaste" style="min-height:145px" placeholder="competitor,text,url,date,author,origin&#10;Acme,Great battery life,https://...,2026-10-08,Reviewer,Forum"></textarea></div><button id="importCsv" class="btn primary">Replace data with CSV</button><p class="input-help">Required columns: <code>competitor,text,url</code>. Optional: <code>date,author,origin</code>. Quotes/commas handled with standard CSV parsing. Review text stays in your browser. Nothing is uploaded to a server.</p><hr style="border:0;border-top:1px solid #e2ece7;margin:22px 0"><h3>Detection is customer-triggered</h3><p class="subtle" style="margin:8px 0">Dictionary families normalize synonyms (e.g., “skimpy” and “portions”). They do not force an attribute into the canvas: only actual mentions do. The emergent phrase miner flags language outside the families.</p><div class="field"><label for="customLabel">New synonym family (optional)</label><input id="customLabel" placeholder="e.g., Battery life"></div><div class="field"><label for="customWords">Customer terms that mean this (comma separated)</label><input id="customWords" placeholder="battery, charge lasts, power drain"></div><button id="addRule" class="btn">+ Add normalization family</button><div id="customRules"></div></div></div>
+<div class="section-head"><div><div class="label-small">Unmapped, repeated language</div><h2>Emergent phrases to investigate</h2><p>Data-mined bigrams mentioned in multiple reviews. Promote any meaningful phrase to a canvas attribute with one click.</p></div></div><div class="card" style="padding:20px"><div id="minedTerms"></div><p class="fine" style="margin-top:12px">Frequency alone does not establish an attribute: generic phrases and duplicates should be reviewed. The built-in rules are also visible under “Method & Limits.”</p></div>
+<div class="section-head"><div><div class="label-small">Provenance register</div><h2>Customer input records</h2><p id="tableMeta"></p></div></div><div class="card source-scroll"><table class="data-table" id="dataTable"><thead><tr><th>Brand / date</th><th>Verbatim short excerpt</th><th>Source</th><th>Manage</th></tr></thead><tbody></tbody></table></div></section>
+<div id="canvasPanel" class="panel hidden">
+<div class="print-head"><div class="eyebrow">Customer-led competitive analysis</div><h1>Blue Ocean Attribute Extractor</h1><div class="fine" id="printContext">Customer-extracted attributes, comparative scores and source-linked evidence.</div></div>
+<div class="kpis"><div class="card kpi"><div id="kBrand" class="stat-number">—</div><div class="stat-label">Competing brands</div><div class="stat-detail">Across a shared comparison set</div></div><div class="card kpi"><div id="kReviews" class="stat-number">—</div><div class="stat-label">Linked customer excerpts</div><div class="stat-detail">One excerpt = one observation</div></div><div class="card kpi"><div id="kThemes" class="stat-number">—</div><div class="stat-label">Extracted attributes</div><div class="stat-detail">Activated only by text</div></div><div class="card kpi"><div id="kSources" class="stat-number">—</div><div class="stat-label">Unique source pages</div><div class="stat-detail">Audit trail included</div></div></div>
+<div class="section-head"><div><div class="label-small">The value curves</div><h2>Strategy Canvas</h2><p id="canvasSubtitle">Scores from cited customer language, not a pre-filled ranking.</p></div><div><span id="focusChip" class="chip">● Focus: Chipotle</span></div></div>
+<div class="card chart-card report-chart"><div class="chart-tools"><span class="chip">1 = negative discussion · 3 = neutral / mixed · 5 = positive discussion</span><span class="chip">N/A = no evidence, not zero</span></div><div id="legend" class="legend"></div><div class="chart-scroll" id="chartContainer" role="img" aria-label="Strategy canvas line chart showing competitor scores by extracted customer attribute"></div><div class="chart-foot"><span>Each plotted point is the mean of mention-specific 1 / 3 / 5 sentiment labels.</span><span>Breaks in a line mean there was no evidence for that competitor; no values were imputed.</span></div></div>
+<div class="section-head" id="scoreTableHeader"><div><div class="label-small">Reproducible comparison</div><h2>Score table</h2><p>Every score displays the number of customer excerpts that contributed.</p></div></div>
+<div class="card table-card"><div class="table-scroll"><table id="scoreTable" class="score-table"><thead></thead><tbody></tbody></table></div></div>
+<div class="callout-grid"><div class="card finding parity" id="commodityFinding"></div><div class="card finding" id="gapFinding"></div></div>
+<div class="recommendation" id="recommendation"></div>
+<div class="section-head"><div><div class="label-small">Attribute provenance</div><h2>What customers actually said</h2><p>These themes are triggered by observed words; source excerpts remain available for verification.</p></div></div>
+<div id="attributeCards" class="details-grid"></div>
+<div class="note" style="margin-top:15px"><b>Important:</b> This is an exploratory qualitative comparison of a small, purposively selected public-review sample—not a representative survey, a market share estimate, or evidence of a causal advantage. “Gap” and “commodity” mean <em>candidate patterns in this sample</em> and require validation before an investment decision.</div>
+<div class="report-method print-method-copy"><div class="section-head"><div><div class="label-small">Transparent arithmetic</div><h2>How scores were created</h2></div></div><div class="note" id="shortMethod"></div></div>
+<div class="print-source-list" id="printSources"></div>
+</div>
+<section id="methodsPanel" class="panel hidden"><div class="section-head"><div><div class="label-small">Why each number is defensible</div><h2>Methodology & interpretation</h2><p>Every step is deterministic, auditable, and re-runs when you change the data.</p></div></div><div class="method-grid"><div class="card method-card"><div class="n">01</div><h3>Customer texts only</h3><p>Begin with dated customer excerpts and their source links, not company copy or analyst-selected 1–5 ratings. Collect the same types of channels and time windows where possible. The included Chipotle example is a purposive Reddit/Trustpilot/App Store sample; it is not random. Imported reviews from other industries follow the same process.</p></div><div class="card method-card"><div class="n">02</div><h3>Text-activated themes</h3><p>Each review is scanned for literal terms. Visible synonym families group phrases with the same operational meaning; no family is surfaced without customer hits. A separate corpus bigram miner flags repeated language the families missed, supporting new industries.</p></div><div class="card method-card"><div class="n">03</div><h3>Contextual polarity</h3><p>For each attribute mentioned in a review, nearby positive/negative words and simple negation rules classify its context as positive (+), neutral/mixed (0), or negative (−). One review votes once per attribute, limiting repeated-word inflation.</p><div class="code-math">Negative → 1 · Neutral → 3 · Positive → 5<br>Score = 3 + 2 × (positive − negative) / mentions</div></div></div>
+<div class="two-col" style="margin-top:16px"><div class="card method-card"><h3>What the labels mean</h3><ul class="info-list"><li><b>Attribute:</b> a theme with at least 2 independent review mentions across at least 2 competitors. Themes emerge only after their text triggers appear.</li><li><b>Score:</b> an average of per-excerpt sentiment labels, not an objective product-quality rating. N/A means no observations.</li><li><b>Commodity candidate:</b> an attribute all four or five competitors mention with a score spread at or below 0.5 points (a small difference relative to the two-point sentiment-category distance) (or explicitly marked “closest parity” if no strict candidate exists).</li><li><b>Gap candidate:</b> an attribute mentioned at least twice per competitor, with every company below neutral 3.0/5 and a majority of negative evidence. This denotes shared dissatisfaction, not verified willingness to pay.</li><li><b>Evidence:</b> cards display the matched term, actual customer excerpt, date, brand and clickable original source.</li></ul></div><div class="card method-card"><h3>Limits that prevent false confidence</h3><ul class="info-list"><li>Self-selected internet posters and channel algorithms overrepresent unusually good/bad experiences.</li><li>Small, deliberately illustrative samples, some older posts, and regional/store-level differences prevent national inference.</li><li>Short excerpts may omit context. Rule-based sentiment can misread sarcasm, negation, comparisons, and mixed reviews. Inspect source links.</li><li>Cross-brand coverage differs by attribute. No mention is missing data—not average or poor performance.</li><li>Word-family normalization is an analyst choice; promoting novel phrases requires review. This is <b>not</b> a pretrained semantic or live scraping engine.</li><li>Cannot determine whether a target company should launch an offering nationally, set its price, or commit substantial capital. Representative customer research, controlled pilots, and cost and willingness-to-pay evidence are necessary.</li></ul></div></div>
+<div class="section-head"><div><div class="label-small">Inspect the rules</div><h2>Synonym families used in extraction</h2><p>The list is a transparent linguistic grouping aid, not hidden brand rankings.</p></div></div><div class="card" id="rulesTable" style="padding:20px"></div><div class="note" style="margin-top:16px"><b>Privacy and deployment:</b> The tool runs locally in the browser as static HTML/CSS/JavaScript. It requires no server, API, paid model, or login. Changes are stored in this browser when storage is available; nothing you enter is transmitted by the tool.</div></section>
+<footer class="footer"><span>Blue Ocean Attribute Extractor · Reproducible qualitative strategy research</span><span id="footerVersion">Starter data assembled November 2026 · no account required</span></footer>
+</div>
+<script>
+'use strict';
+const ORIGINAL_DATA = [
+  {
+    "competitor": "Chipotle",
+    "text": "portion sizes have been getting smaller and smaller each time I go.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1tkuhlu/walked_out_mid_order/",
+    "date": "2026-05-22",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "A $15 bowl with a small portion is ridiculous even in 2026.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1v7rdjg/chipotle_has_gone_downhill/",
+    "date": "2026-07-27",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "the quality is worse and it rarely tastes fresh.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1l8aa4e",
+    "date": "2025-06-10",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "The prices have become ridiculous … The flavor is abysmal compared to what it once was.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1kqr1cl",
+    "date": "2025-05-19",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "15-20 minutes pass. I ask again. Same thing. They just keep saying the order was delivered and close the chat.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1xuhau3/chipotle_customer_service_chat_is_useless/",
+    "date": "2026-11-12",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "every item in the order was made wrong in significant ways",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1vxhjuu/done_with_chipotle_criminals/",
+    "date": "2026-08-24",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "Employees constantly skimp customers on mobile orders.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1uxlgy6/mobile_ordering_has_ruined_chipotle/",
+    "date": "2026-07-15",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "20 in line, 7 waiting on mobile",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1wdynrt/there_has_to_be_a_better_way/",
+    "date": "2026-09-12",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "showed up at 7:20 and they still hadn’t even started making it till 7:50.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1q3bl4d/what_is_the_deal_with_contacting_anyone/",
+    "date": "2026-01-04",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "I usually like Chipotle. Not today. Stingy portions. Server was not helpful or friendly.",
+    "url": "https://www.trustpilot.com/review/www.chipotle.com",
+    "date": "2026-01-05",
+    "author": "Ben G",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "My location has great quality and portions.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1l8aa4e",
+    "date": "2025-06-11",
+    "author": "Reddit commenter",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "my steak is completely inedible. it was really fatty and gummy and the taste was just off.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1swl5h5/customer_service_reps_are_ignoring_me/",
+    "date": "2026-04-26",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "$14 steak bowl. Everything extra is free, including guac and queso. Amazing value. And it tastes way better.",
+    "url": "https://www.reddit.com/r/qdoba/comments/1ulusyh/qdoba_chipotle/",
+    "date": "2026-07-02",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "Free queso and guac come on!",
+    "url": "https://www.reddit.com/r/stonerfood/comments/1ulljc6/qdoba_is_way_better_than_chipotle/",
+    "date": "2026-07-02",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "They were barely half the size they usually are. … I’ve learned never to order online because it’s always either wrong or skimped.",
+    "url": "https://www.reddit.com/r/qdoba/comments/1mbm3f3",
+    "date": "2025-07-28",
+    "author": "Reddit customer and commenter",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "the chips was so freaking stale and hard we couldn’t even eat them",
+    "url": "https://www.reddit.com/r/qdoba/comments/1f61tmj",
+    "date": "2024-09-01",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "one scoop of rice. I was told it would be charged as a side.",
+    "url": "https://www.reddit.com/r/qdoba/comments/1v9eson/is_this_a_recession_indicator/",
+    "date": "2026-07-28",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "The place looks like it’s not being cleaned frequently, the bowl was a lot smaller than before",
+    "url": "https://www.reddit.com/r/rutgers/comments/1nditdh/qdoba/",
+    "date": "2025-09-10",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "inside was just meat and cheese. I went back up and asked about the pico de gallo and side of sour cream",
+    "url": "https://www.reddit.com/r/qdoba/comments/1mwwyc6",
+    "date": "2025-08-22",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "The store was very clean, food was fresh and crew was on point!",
+    "url": "https://www.trustpilot.com/review/qdoba.com",
+    "date": "2026-08-04",
+    "author": "Karen Senders",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "it won’t let me login? Not on the app or on the website",
+    "url": "https://www.reddit.com/r/qdoba/comments/18yg6qu",
+    "date": "2024-01-04",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "They gave me tons of chicken without me asking and large portions of everything. The employees even smiled.",
+    "url": "https://www.reddit.com/r/Chipotle/comments/1d92v3i/i_did_it_i_went_to_the_competitor/",
+    "date": "2024-06-05",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "tried the braised lamb for the first time and omg!!!! soooo good",
+    "url": "https://www.reddit.com/r/cava/comments/1s87phc/shes_beautiful/",
+    "date": "2026-03-31",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "food doesn’t even hit the first line on the bowl.",
+    "url": "https://www.reddit.com/r/cava/comments/1vxqjr4/is_this_a_normal_portion/",
+    "date": "2026-08-25",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "the bowls are shrinking and the portions are smaller. Especially if you order online.",
+    "url": "https://www.reddit.com/r/cava/comments/1wggumc/cavas_ceo_says_the_chain_has_taken_less_than_half/",
+    "date": "2026-09-14",
+    "author": "Reddit commenter",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "I always order the same thing and today it looks like half empty.",
+    "url": "https://www.reddit.com/r/cava/comments/1uoeyws/are_portions_getting_smaller/",
+    "date": "2026-07-05",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "This feels like a waste of money. I was still starving afterward.",
+    "url": "https://www.reddit.com/r/cava/comments/1v32g9e/are_portions_always_this_little/",
+    "date": "2026-07-22",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "I did not leave with my single bowl until 8:30. My order was also missing half the ingredients?",
+    "url": "https://www.reddit.com/r/cava/comments/1jatdqw",
+    "date": "2025-03-14",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "Whenever I order in person at Cava and scan my barcode for poinfs, it literally never registers.",
+    "url": "https://www.reddit.com/r/cava/comments/1x7wq54/only_online_orders_showing_up_on_my_app/",
+    "date": "2026-10-17",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "Everything is always out of stock, sometimes even RICE by 6-7PM on a Friday.",
+    "url": "https://www.reddit.com/r/raleigh/comments/1rc50gl/someone_wrote_a_post_about_the_cava_in_cary_im/",
+    "date": "2026-02-23",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "the worst thing at cava is being behind someone in line who has never been to cava",
+    "url": "https://www.reddit.com/r/cava/comments/1suo1gg/the_long_line/",
+    "date": "2026-04-24",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "the food is delicious but I also don't feel grossley full when I leave because the food is really nice and fresh.",
+    "url": "https://www.trustpilot.com/review/cava.com",
+    "date": "2026-10-28",
+    "author": "Brandon Thomas",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "it tells me it’ll be ready in 10 minutes and then it’s actually 40",
+    "url": "https://www.reddit.com/r/cava/comments/1f64mzd",
+    "date": "2024-09-01",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "One salad isn’t even a meal. … And why can’t you people remember my bread?",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1tqi1cf/really_disappointing/",
+    "date": "2026-05-28",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "Everything was so dry - veggies, chicken, everything. Definitely not worth $20.",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1qubrsw/did_quality_go_down/",
+    "date": "2026-02-02",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "every time something is wrong. They forget something or give me something else entirely.",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1xmb3i7/is_it_just_my_location/",
+    "date": "2026-11-02",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "after several delayed orders! I ordered Sweetgreen outpost. The AI proceeds to ask me a bunch of useless questions",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1weqmnw/ai_customer_service_hell/",
+    "date": "2026-09-12",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "I’ve heard they have horrible portions, is this normal? The three pieces of broccoli was honestly comical to me",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1logtj3",
+    "date": "2025-06-30",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "i had online rewards",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1sfx3k5/sweet_green_first_time_1007/",
+    "date": "2026-04-08",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "Hoping they launch some low-cal or custom options soon!!",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1t9gqr5/why_do_the_new_wraps_have_so_many_calories/",
+    "date": "2026-05-10",
+    "author": "Reddit customer",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "I am so annoyed that I cannot call a physical store to talk to an actual person.",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1lxqols",
+    "date": "2025-07-25",
+    "author": "Reddit commenter",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "I get a custom salad but the same one every single time. It’s perfection in a bowl!",
+    "url": "https://www.reddit.com/r/sweetgreen/comments/1f3abhx",
+    "date": "2024-08-30",
+    "author": "Reddit commenter",
+    "origin": "Reddit"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "Their salads and bowls are delicious and fresh. I love their dressings!",
+    "url": "https://www.trustpilot.com/review/sweetgreen.com",
+    "date": "2026-06-17",
+    "author": "Blythe Lipman",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "They make me wait for some time. … the steak I ordered is missing.",
+    "url": "https://apps.apple.com/us/app/sweetgreen/id594329490?see-all=reviews",
+    "date": "2026-07-02",
+    "author": "Orch-22",
+    "origin": "Apple App Store"
+  },
+  {
+    "competitor": "Sweetgreen",
+    "text": "They will not allow you to speak to a real person.",
+    "url": "https://www.trustpilot.com/review/sweetgreen.com",
+    "date": "2026-06-17",
+    "author": "Mary Milosch",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "Chipotle",
+    "text": "Both orders were botched.",
+    "url": "https://www.trustpilot.com/review/www.chipotle.com",
+    "date": "2026-02-08",
+    "author": "Steve Ray",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "QDOBA",
+    "text": "several items missing off bowl.",
+    "url": "https://www.trustpilot.com/review/qdoba.com",
+    "date": "2026-07-29",
+    "author": "Anonymous",
+    "origin": "Trustpilot"
+  },
+  {
+    "competitor": "CAVA",
+    "text": "something was always wrong with my order!",
+    "url": "https://www.reddit.com/r/cava/comments/1vxqjr4/is_this_a_normal_portion/",
+    "date": "2026-08-25",
+    "author": "Reddit commenter",
+    "origin": "Reddit"
+  }
+];
+const STORE_KEY='blue-ocean-extractor-v4';
+const COLORS=['#0b7366','#e09456','#637aa9','#8a6dab','#b95e70'];
+const RULES=[
+ {label:'Portion size & consistency',terms:['portion','portions','scoop','small bowl','half empty','half full','skimp','skimpy','tiny','generous','plentiful','stuffed','filled','filling','full bowl','smaller','large portions','tons of']},
+ {label:'Price & value',terms:['price','prices','priced','pricing','expensive','overpriced','cost','money','value','worth','$','charge','charged','free','afford','waste of money','rip off','ripped off']},
+ {label:'Taste & flavor',terms:['taste','tastes','tasty','flavor','flavour','delicious','bland','seasoning','seasoned','salty','yummy','gross','good food','food was good','soooo good','perfection','inedible']},
+ {label:'Freshness & food quality',terms:['fresh','quality','stale','dry','burnt','cold','hot','greasy','old food','gummy','fatty','good ingredients','inedible','spoiled','crisp']},
+ {label:'Order accuracy',terms:['wrong','incorrect','missing','forget','forgot','botched','messed up','made wrong','didn t get','did not get','without chicken','no salmon','missing items','left out','never get','order errors']},
+ {label:'Pickup & wait reliability',terms:['wait','waiting','late','delay','delayed','ready','pickup','pick up','line','long line','faster','slow','fast','quick','on time','started making','timing']},
+ {label:'Staff experience & support',terms:['staff','employee','employees','worker','workers','server','manager','service','friendly','helpful','rude','polite','kind','greeted','customer support','chat','person','crew','smiled','support bot']},
+ {label:'Customization & variety',terms:['custom','choice','choices','options','variety','selection','topping','toppings','extra','add on','guac','queso','dressing','vegetarian','substitute','sour cream','pico de gallo','menu']},
+ {label:'Digital app & rewards',terms:['app','online','mobile','rewards','points','coupon','barcode','website','digital','login','online order','chatbot','ai','registers']},
+ {label:'Ingredient availability',terms:['out of','out of stock','unavailable','ran out','stocked','not available','no rice','sold out','no chicken','missing ingredients','ingredient shortage']},
+ {label:'Store cleanliness',terms:['clean','dirty','filthy','bathroom','sanitary','unsanitary','hygiene']}
+];
+const POS=['great','good','delicious','tasty','amazing','fresh','flavorful','flavourful','excellent','generous','plentiful','huge','stuffed','full','quick','fast','friendly','helpful','love','best','perfect','nice','easy','worth','reliable','accurate','clean','outstanding','convenient','affordable','reasonable','happy','wonderful','smooth','incredible','better','fresher','enjoy','smiled','free','on point','on time','satisfied'];
+const NEG=['bad','poor','terrible','horrible','awful','disappoint','botch','skimp','skimpy','tiny','small','smaller','shrinking','expensive','overpriced','waste','wrong','missing','slow','long','delayed','delay','late','rude','dry','stale','burnt','cold','unavailable','out','inconsistent','frustrat','disgust','flavorless','bland','unreliable','forgot','forget','messed','incorrect','underfilled','empty','costly','broken','greasy','ignored','ridiculous','low','ration','barely','never','couldn','won','wasn','didn','doesn','can','no','not','abysmal','gummy','fatty','inedible','starving','worst','useless','sick','hate'];
+const STOP=new Set('the and for from that with this have were what when which your their been will into there them then here just even they you was are but not all has had how can our out who why about very only today want came like ever made really more much have after before each over again always same some thing still here any also what been also next since because would should could very ever only every really much some while used even home first ever time order orders food bowl bowls customers'.split(' '));
+let data=ORIGINAL_DATA.map(x=>({...x}));let customRules=[];let target='Chipotle';let analysis=null;
+const $=id=>document.getElementById(id);
+function normalize(s){return String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’‘]/g,"'").replace(/\$/g,' dollar ').replace(/[^a-z0-9\s']/g,' ').replace(/\b(can't|cannot)\b/g,' can not ').replace(/\b(won't)\b/g,' will not ').replace(/\b(don't)\b/g,' do not ').replace(/\b(doesn't)\b/g,' does not ').replace(/\b(didn't)\b/g,' did not ').replace(/\b(isn't)\b/g,' is not ').replace(/\b(wasn't)\b/g,' was not ').replace(/\b(haven't)\b/g,' have not ').replace(/\s+/g,' ').trim()}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function safeUrl(s){try{let u=new URL(String(s));return ['https:','http:'].includes(u.protocol)?u.href:null}catch{return null}}
+function urlLink(s,caption='Source ↗'){const u=safeUrl(s);return u?`<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer">${escapeHtml(caption)}</a>`:'<span class="warning">No valid source URL</span>'}
+function familyHits(str,terms){const norm=normalize(str);const hits=[];for(const term of terms){const t=normalize(term);if(!t)continue;const re=new RegExp('(?:^|\\s)'+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?=\\s|s\\b|ed\\b|ing\\b|$)','g');let m;while((m=re.exec(norm))!==null){hits.push({term,position:Math.max(0,m.index),matched:(m[0]||'').trim()});if(hits.length>40)break}}
+const dedup=new Map();for(const h of hits){const key=h.position+':'+h.matched;const prev=dedup.get(key);if(!prev||h.term.length>prev.term.length)dedup.set(key,h)}return [...dedup.values()].sort((a,b)=>a.position-b.position)}
+function tokenize(s){return normalize(s).split(/\s+/).filter(Boolean)}
+function hasStem(word,arr){return arr.some(st=>word===st||(st.length>=4&&word.startsWith(st)))}
+function localTone(text,hits){const tokens=tokenize(text);if(!tokens.length)return {tone:0,why:'No tokens'};let best=0;let considered=false;for(const hit of hits){const before=normalize(text).slice(0,Math.max(0,hit.position)).split(' ').filter(Boolean).length;const pivot=Math.min(tokens.length-1,before);let plus=0,minus=0;for(let i=Math.max(0,pivot-9);i<=Math.min(tokens.length-1,pivot+9);i++){
+const w=tokens[i];let p=hasStem(w,POS),n=hasStem(w,NEG);const prev=tokens.slice(Math.max(0,i-2),i);const negWords=['not','no','never','without'];const negated=negWords.includes(prev[prev.length-1])||(prev.length>1&&negWords.includes(prev[0])&&['very','so','really','quite','too','at','a','any'].includes(prev[1]));if(negated&&p){p=false;n=true} else if(negated&&n&&!['missing','wrong','delay','late'].includes(w)){n=false;p=true}
+// Explicit negatives that are not attribute sentiment on their own are excluded.
+if(['not','no','never','out','can'].includes(w)){n=false}
+const weight=1/(1+Math.abs(i-pivot)*.24);if(p)plus+=weight;if(n)minus+=weight}
+if(plus||minus)considered=true;const delta=plus-minus;best+=delta>0.22?1:delta<-.22?-1:0}
+return {tone:best>0?1:best<0?-1:0,why:considered?'Nearby sentiment terms':'No strong local polarity'} }
+function uniqueBrands(){return [...new Set(data.map(x=>x.competitor.trim()).filter(Boolean))]}
+function emergentPhrases(){const observed=new Map();for(const rev of data){const words=tokenize(rev.text).filter(w=>w.length>2);const local=new Set();const brandTokens=new Set(uniqueBrands().flatMap(b=>tokenize(b)));for(let i=0;i<words.length-1;i++){const a=words[i],b=words[i+1];if(a.length<4||b.length<4||STOP.has(a)||STOP.has(b)||brandTokens.has(a)||brandTokens.has(b))continue;local.add(a+' '+b)}for(const p of local){if(!observed.has(p))observed.set(p,{phrase:p,count:0,brands:new Set()});let v=observed.get(p);v.count++;v.brands.add(rev.competitor)}}const allRules=[...RULES,...customRules];return [...observed.values()].filter(v=>v.count>=2&&v.brands.size>=2&&!allRules.some(rule=>familyHits(v.phrase,rule.terms).length>0)).sort((a,b)=>b.count-a.count||b.brands.size-a.brands.size).slice(0,18)}
+function analyze(){const brands=uniqueBrands();const themes=[];for(const rule of [...RULES,...customRules]){let observations=[];let vocab=new Map();for(const rev of data){let hits=familyHits(rev.text,rule.terms);if(!hits.length)continue;const rated=localTone(rev.text,hits);observations.push({...rev,tone:rated.tone,terms:[...new Set(hits.map(h=>h.matched))],why:rated.why});for(const h of hits){vocab.set(h.matched,(vocab.get(h.matched)||0)+1)}}
+if(observations.length<2||new Set(observations.map(r=>r.competitor)).size<2)continue;const scores={};for(const brand of brands){const rs=observations.filter(r=>r.competitor===brand);const p=rs.filter(r=>r.tone===1).length,n=rs.filter(r=>r.tone===-1).length,z=rs.filter(r=>r.tone===0).length;scores[brand]={score:rs.length?3+2*(p-n)/rs.length:null,n:rs.length,p,neg:n,neu:z}}
+themes.push({...rule,observations,vocab:[...vocab].sort((a,b)=>b[1]-a[1]),scores,total:observations.length,reach:Object.values(scores).filter(s=>s.n).length})}
+themes.sort((a,b)=>b.total-a.total||b.reach-a.reach||a.label.localeCompare(b.label));const comparable=themes.filter(t=>brands.every(b=>t.scores[b]&&t.scores[b].n>=1));const gapCandidates=themes.filter(t=>brands.every(b=>t.scores[b]&&t.scores[b].n>=2&&t.scores[b].score<3)&&t.observations.filter(v=>v.tone===-1).length>t.observations.length/2).sort((a,b)=>mean(brands.map(k=>a.scores[k].score))-mean(brands.map(k=>b.scores[k].score)));const gap=gapCandidates[0]||null;const parityRanks=comparable.filter(t=>t!==gap).map(t=>({t,spread:Math.max(...brands.map(b=>t.scores[b].score))-Math.min(...brands.map(b=>t.scores[b].score))})).sort((a,b)=>a.spread-b.spread||b.t.total-a.t.total);const commodity=parityRanks[0]||null;return {brands,themes,comparable,gap,commodity,mined:emergentPhrases()}}
+function mean(a){return a.reduce((s,v)=>s+v,0)/a.length}
+function scoreText(v){return v===null?'N/A':v.toFixed(1)}
+function reportErr(msg,kind='error'){const el=$('toast');el.className=kind;el.textContent=msg;el.scrollIntoView({behavior:'smooth',block:'nearest'});setTimeout(()=>{if(el.textContent===msg){el.className='';el.textContent=''}},7500)}
+function storageSave(){try{localStorage.setItem(STORE_KEY,JSON.stringify({data,customRules,target}))}catch{}}
+function storageLoad(){try{const v=JSON.parse(localStorage.getItem(STORE_KEY)||'null');if(v&&Array.isArray(v.data)&&v.data.length&&v.data.every(r=>r.competitor&&r.text)){data=v.data;customRules=Array.isArray(v.customRules)?v.customRules:[];target=v.target||'Chipotle'}}catch{}}
+function renderChart(a){const themes=a.themes,brands=a.brands;const W=Math.max(860,Math.max(9,themes.length)*111+90),H=405,left=48,right=24,top=32,baseline=274;const n=themes.length;const start=left+120,end=W-right-24;const x=i=>start+(n<2?0:(end-start)*i/(n-1));const y=v=>baseline-(v-1)*54;let svg=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strategy Canvas with customer sentiment scores from one to five">`;
+for(let v=1;v<=5;v++){svg+=`<line x1="${left}" y1="${y(v)}" x2="${W-right}" y2="${y(v)}" stroke="${v===3?'#a5b5ae':'#dfe6e2'}" stroke-dasharray="${v===3?'4 5':'2 5'}"/><text x="${left-13}" y="${y(v)+4}" text-anchor="middle" fill="#6a8177" font-size="12" font-weight="650">${v}</text>`}
+for(let i=0;i<n;i++){const axis=themes[i];const isGap=a.gap&&axis.label===a.gap.label;if(isGap)svg+=`<rect x="${x(i)-35}" y="${top-9}" width="70" height="${baseline-top+20}" rx="8" fill="#d9f0e6" opacity=".56"/>`;svg+=`<line x1="${x(i)}" y1="${top}" x2="${x(i)}" y2="${baseline+8}" stroke="#e1e8e3" stroke-dasharray="2 6"/><text transform="translate(${x(i)-2},${baseline+23}) rotate(-43)" text-anchor="end" fill="#405b56" font-size="11" font-weight="650">${escapeHtml(axis.label)}</text>`}
+for(const [bi,brand] of brands.entries()){let current=[];function flush(){if(current.length>1)svg+=`<polyline points="${current.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${COLORS[bi%COLORS.length]}" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round"/>`;current=[]}for(let i=0;i<n;i++){const s=themes[i].scores[brand].score;if(s===null){flush();continue}current.push([x(i),y(s)])}flush();for(let i=0;i<n;i++){const r=themes[i].scores[brand];if(r.score===null)continue;svg+=`<circle cx="${x(i)}" cy="${y(r.score)}" r="4.3" fill="white" stroke="${COLORS[bi%COLORS.length]}" stroke-width="2.9"><title>${escapeHtml(brand)} — ${escapeHtml(themes[i].label)}: ${scoreText(r.score)} / 5 (n=${r.n})</title></circle>`}}
+svg+=`<text x="${left}" y="17" fill="#6e8b80" font-weight="700" font-size="11">PERCEIVED PERFORMANCE</text></svg>`;$('chartContainer').innerHTML=svg;$('legend').innerHTML=brands.map((b,i)=>`<span class="legend-item"><i class="swatch" style="background:${COLORS[i%COLORS.length]}"></i>${escapeHtml(b)}</span>`).join('')}
+function markFirst(text,terms){const ordered=[...terms].sort((a,b)=>b.length-a.length);for(const term of ordered){if(term==='$')continue;const idx=text.toLowerCase().indexOf(term.toLowerCase());if(idx>=0)return escapeHtml(text.slice(0,idx))+'<mark>'+escapeHtml(text.slice(idx,idx+term.length))+'</mark>'+escapeHtml(text.slice(idx+term.length))}return escapeHtml(text)}
+function renderAttributeCards(a){$('attributeCards').innerHTML=a.themes.map(t=>{const sorted=[...t.observations].sort((x,y)=>String(y.date).localeCompare(String(x.date)));const samples=[];for(const brand of a.brands){const first=sorted.find(v=>v.competitor===brand);if(first)samples.push(first)}for(const v of sorted){if(samples.length>=4)break;if(!samples.includes(v))samples.push(v)}const vocab=t.vocab.slice(0,5).map(([w,count])=>`${escapeHtml(w)} (${count})`).join(' · ');return `<article class="card attribute"><div class="attribute-head"><div><h3>${escapeHtml(t.label)}</h3><div class="meta">${t.total} source excerpts · ${t.reach}/${a.brands.length} companies · ${t.observations.filter(r=>r.tone===-1).length} negative mentions</div></div><span class="chip">${t.total} hits</span></div><div class="tokens"><b>Observed cues:</b> ${vocab}</div><div class="evidence-list">${samples.map(s=>`<div class="quote"><b>${escapeHtml(s.competitor)}</b><span class="tone ${s.tone===1?'pos':s.tone===-1?'neg':'neu'}">${s.tone===1?'positive':s.tone===-1?'negative':'neutral'}</span> <small>· ${escapeHtml(s.date||'undated')}</small><div>“${markFirst(s.text,s.terms)}”</div>${urlLink(s.url)}</div>`).join('')}</div></article>`}).join('')}
+function renderFindings(a){const c=a.commodity,g=a.gap;if(c){const strict=c.spread<=.5;$('commodityFinding').innerHTML=`<div class="label-small">Closest to commodity / shared parity</div><h3>${escapeHtml(c.t.label)}</h3><p>${strict?'Observed score spread is':'No attribute met the ≤0.5 threshold; closest spread is'} <b>${c.spread.toFixed(2)} points</b> across all ${a.brands.length} brands (scores ${a.brands.map(b=>`${escapeHtml(b)} ${scoreText(c.t.scores[b].score)}`).join(' · ')}). ${strict?'This is a commodity candidate in the sample, not a proven industry commodity.':'This is NOT defensibly commoditized; it is shown only as the nearest-to-parity candidate.'}</p>`}else{$('commodityFinding').innerHTML='<div class="label-small">Commodity check</div><h3>Insufficient comparable evidence</h3><p>No attribute had mentions for every competitor. Import more reviews before making a commodity claim.</p>'}if(g){const negatives=g.observations.filter(x=>x.tone===-1).length;$('gapFinding').innerHTML=`<div class="label-small">Shared unmet need · gap candidate</div><h3>${escapeHtml(g.label)}</h3><p>All ${a.brands.length} competitors score <b>below neutral 3.0/5</b> with at least two observations each. ${negatives}/${g.total} associated excerpts are negative. This is a cross-competitor dissatisfaction gap worth testing—not proof of willingness to pay.</p>`}else{$('gapFinding').innerHTML='<div class="label-small">Shared unmet need · gap check</div><h3>No defensible four-brand gap detected</h3><p>Nothing satisfied the documented cross-company coverage, negative-majority, and score thresholds. More or better-balanced reviews are needed; the tool does not invent an opening.</p>'}}
+function renderRecommendation(a){let focus=target,topic=a.gap?a.gap.label:(a.commodity?a.commodity.t.label:'customer needs');let detail;if(a.gap&&/Order accuracy|Pickup/.test(topic)){detail=`Pilot a “right order, ready when promised” pickup promise for <b>${escapeHtml(focus)}</b>: use a pre-seal item checklist, accurate live pickup timestamps, and immediate human resolution when an item is missing. Run a multi-location test and compare wrong-item rate, minutes late, recovery cost, satisfaction, and repeat purchases against a control group.`}else if(a.gap){detail=`For <b>${escapeHtml(focus)}</b>, run a controlled pilot designed to solve <b>${escapeHtml(topic)}</b> better than current alternatives. Define a concrete customer outcome, measure actual behavior and unit economics, and confirm demand across locations before scaling.`}else{detail=`For <b>${escapeHtml(focus)}</b>, first expand the review sample with comparable, recent customer data across all competitors. Test whether the candidate pattern around <b>${escapeHtml(topic)}</b> persists; no shared low-performing attribute yet passes the required gap criteria.`} $('recommendation').innerHTML=`<div class="eyebrow">Strategic recommendation · ${a.gap?'gap-led pilot':'evidence-led next step'}</div><h2>${a.gap?'Compete on what nobody reliably delivers.':'Validate before committing.'}</h2><p>${detail}</p>`}
+function renderTable(a){$('scoreTable').querySelector('thead').innerHTML=`<tr><th>Customer-extracted attribute</th>${a.brands.map((b,i)=>`<th style="color:${COLORS[i%COLORS.length]}">${escapeHtml(b)}</th>`).join('')}<th>Mentions</th></tr>`;$('scoreTable').querySelector('tbody').innerHTML=a.themes.map(t=>`<tr><td><b>${escapeHtml(t.label)}</b></td>${a.brands.map(b=>{const s=t.scores[b];return `<td>${s.n?`<span class="score">${scoreText(s.score)}</span><span class="count">n=${s.n}; +${s.p} / ±${s.neu} / −${s.neg}</span>`:'<span class="na">N/A</span>'}</td>`}).join('')}<td><b>${t.total}</b></td></tr>`).join('')}
+function renderRules(){let all=[...RULES,...customRules];$('rulesTable').innerHTML=all.map((r,i)=>`<p style="margin-bottom:11px"><b>${escapeHtml(r.label)}</b> <span class="fine">${i<RULES.length?'built-in':'custom'}</span> — <span class="subtle">${escapeHtml(r.terms.join(', '))}</span></p>`).join('')}
+function renderSources(a){$('printSources').innerHTML=`<h2>Source register · complete audit trail</h2><p class="fine">A short excerpt is a traceable qualitative observation, not a representative review or independent survey response. Multiple reviews may share a page; click the original source for context. A few excerpts join non-contiguous phrases with “…”.</p><ol>${data.map(r=>`<li><b>${escapeHtml(r.competitor)}</b> · ${escapeHtml(r.date||'undated')} · ${escapeHtml(r.origin||'User supplied')} · <span class="src-snippet">“${escapeHtml(r.text)}”</span> · ${urlLink(r.url,'Original ↗')}</li>`).join('')}</ol>`}
+function renderStudio(a){$('targetBrand').innerHTML=a.brands.map(b=>`<option value="${escapeHtml(b)}" ${b===target?'selected':''}>${escapeHtml(b)}</option>`).join('');$('dataTable').querySelector('tbody').innerHTML=data.map((r,i)=>`<tr><td><b>${escapeHtml(r.competitor)}</b><br>${escapeHtml(r.date||'No date')}<br><span class="fine">${escapeHtml(r.origin||'Customer')}</span></td><td>“${escapeHtml(r.text)}”</td><td>${urlLink(r.url,'View original ↗')}</td><td><button class="btn tiny danger" data-delete="${i}" aria-label="Delete review ${i+1}">Remove</button></td></tr>`).join('');$('tableMeta').textContent=`${data.length} excerpts · ${a.brands.length} companies`;$('minedTerms').innerHTML=a.mined.length?a.mined.map(v=>`<button class="btn tiny" data-promote="${escapeHtml(v.phrase)}">+ ${escapeHtml(v.phrase)} <span style="color:#79968c">(${v.count})</span></button>`).join(''):'<span class="fine">No repeated phrases outside the current synonym families met the cross-company threshold. Import more reviews or add a custom family.</span>';$('customRules').innerHTML=customRules.map((r,i)=>`<p style="margin-top:11px;font-size:11px"><span class="user-pill">${escapeHtml(r.label)} · ${r.terms.length} cues</span> <button class="btn tiny danger" data-rule-delete="${i}">Remove</button></p>`).join('')}
+function render(){analysis=analyze();const a=analysis;const srcs=new Set(data.map(x=>x.url));$('kBrand').textContent=a.brands.length;$('kReviews').textContent=data.length;$('kThemes').textContent=a.themes.length;$('kSources').textContent=srcs.size;$('canvasSubtitle').textContent=`${a.brands.join(' · ')} | ${a.themes.length} attributes from ${data.length} source-linked excerpts.`;$('focusChip').textContent='● Focus: '+target;renderChart(a);renderTable(a);renderFindings(a);renderRecommendation(a);renderAttributeCards(a);renderSources(a);renderStudio(a);renderRules();$('printContext').textContent=`Focus: ${target} · ${a.brands.length} competitors · ${a.themes.length} attributes · ${data.length} customer excerpts`;$('shortMethod').innerHTML='Source-linked customer excerpt → find actual customer terms → group synonyms into activated attributes → classify nearby sentiment as positive (5), neutral (3), or negative (1) → average once per excerpt per attribute. <b>Formula:</b> 3 + 2 × (positive − negative) / total mentions. N/A = not observed. Commodity candidate: max–min spread ≤0.5 with all brands present. Gap candidate: ≥2 mentions per brand, all below 3.0, majority negative. Rules are deterministic, not a trained model; inspect source context and avoid causal or population-level claims.';storageSave()}
+function changePanel(id){document.querySelectorAll('.panel').forEach(el=>el.classList.toggle('hidden',el.id!==id));document.querySelectorAll('.tab').forEach(b=>{const on=b.dataset.panel===id;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on))});window.scrollTo({top:document.querySelector('.toolbar').getBoundingClientRect().top+window.scrollY-10,behavior:'smooth'})}
+function csvQuote(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function exportCsv(){const heads=['competitor','text','url','date','author','origin'];let csv=[heads.join(','),...data.map(r=>heads.map(h=>csvQuote(r[h]||'')).join(','))].join('\r\n');download(new Blob(['\ufeff',csv],{type:'text/csv;charset=utf-8'}),'blue-ocean-customer-evidence.csv')}
+function download(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+function parseCSV(s){s=s.replace(/^\ufeff/,'');let rows=[],row=[],field='',quoted=false;for(let i=0;i<s.length;i++){const c=s[i];if(quoted){if(c==='"'&&s[i+1]==='"'){field+='"';i++}else if(c==='"')quoted=false;else field+=c}else if(c==='"')quoted=true;else if(c===','){row.push(field);field=''}else if(c==='\n'||c==='\r'){if(c==='\r'&&s[i+1]==='\n')i++;row.push(field);if(row.some(x=>x.trim()))rows.push(row);field='';row=[]}else field+=c}if(quoted)throw Error('CSV has an unclosed quoted field');row.push(field);if(row.some(x=>x.trim()))rows.push(row);if(rows.length<2)throw Error('Include a CSV header and at least one review');let h=rows.shift().map(x=>x.trim().toLowerCase());for(const req of ['competitor','text','url'])if(!h.includes(req))throw Error('Missing required column: '+req);const out=rows.map((row,i)=>{const obj={};h.forEach((key,k)=>obj[key]=(row[k]||'').trim());for(const k of ['competitor','text','url'])if(!obj[k])throw Error('Row '+(i+2)+' is missing '+k);if(!safeUrl(obj.url))throw Error('Row '+(i+2)+' has no valid HTTP(S) source URL');return {competitor:obj.competitor.slice(0,100),text:obj.text.slice(0,3000),url:obj.url,date:obj.date||'',author:obj.author||'Customer',origin:obj.origin||'Imported review'}});return out}
+function printAnalysis(){const was=document.querySelector('.tab.active')?.dataset.panel||'studioPanel';changePanel('canvasPanel');setTimeout(()=>{window.print();if(was!=='canvasPanel')changePanel(was)},90)}
+function init(){storageLoad();if(!uniqueBrands().includes(target))target=uniqueBrands()[0]||'Chipotle';document.querySelectorAll('[data-panel]').forEach(b=>b.addEventListener('click',()=>changePanel(b.dataset.panel)));$('printTop').addEventListener('click',printAnalysis);$('viewCanvas').addEventListener('click',()=>changePanel('canvasPanel'));$('downloadCsv').addEventListener('click',exportCsv);$('targetBrand').addEventListener('change',e=>{target=e.target.value;render()});$('addReview').addEventListener('click',()=>{let competitor=$('newBrand').value.trim(),txt=$('newReview').value.trim(),url=$('newUrl').value.trim(),date=$('newDate').value;if(!competitor||!txt||!safeUrl(url)){reportErr('Enter a competitor, exact review text, and a valid HTTP(S) source URL.');return}data.push({competitor,text:txt,url,date,author:'Customer',origin:'User supplied'});for(const id of ['newBrand','newReview','newUrl','newDate'])$(id).value='';if(!uniqueBrands().includes(target))target=competitor;render();reportErr('Review added and all scores recomputed.','success')});$('resetData').addEventListener('click',()=>{if(confirm('Restore the original source-linked Chipotle dataset and remove imported customer reviews and custom rules?')){data=ORIGINAL_DATA.map(x=>({...x}));customRules=[];target='Chipotle';render();reportErr('Starter dataset restored.','success')}});$('importCsv').addEventListener('click',()=>{try{let next=parseCSV($('csvPaste').value);data=next;target=uniqueBrands()[0];render();reportErr('CSV imported: '+next.length+' source-linked reviews.','success')}catch(e){reportErr(e.message)}});$('csvFile').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{const content=await f.text();$('csvPaste').value=content;reportErr('CSV loaded into the preview. Click Replace data with CSV to apply.','success')}catch{reportErr('Could not read this file.')}});$('addRule').addEventListener('click',()=>{const label=$('customLabel').value.trim(),terms=$('customWords').value.split(',').map(x=>x.trim()).filter(Boolean);if(!label||!terms.length){reportErr('Enter a label and at least one customer term.');return}if([...RULES,...customRules].some(r=>r.label.toLowerCase()===label.toLowerCase())){reportErr('That attribute label already exists.');return}customRules.push({label:label.slice(0,100),terms:terms.slice(0,35)});$('customLabel').value=$('customWords').value='';render();reportErr('Custom normalization family added. It will display only if customer text mentions it.','success')});$('customRules').addEventListener('click',e=>{const b=e.target.closest('[data-rule-delete]');if(!b)return;customRules.splice(+b.dataset.ruleDelete,1);render()});$('minedTerms').addEventListener('click',e=>{const b=e.target.closest('[data-promote]');if(!b)return;const phrase=b.dataset.promote;const label=phrase.split(' ').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ');customRules.push({label,terms:[phrase]});render();reportErr('Emergent phrase promoted to a customer-derived canvas attribute.','success')});$('dataTable').addEventListener('click',e=>{const b=e.target.closest('[data-delete]');if(!b)return;data.splice(+b.dataset.delete,1);if(!data.length){data=ORIGINAL_DATA.map(x=>({...x}));reportErr('Dataset cannot be empty; the starter example has been restored.')}if(!uniqueBrands().includes(target))target=uniqueBrands()[0];render()});render()}
+init();
+</script>
+</body>
+</html>
